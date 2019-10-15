@@ -1,0 +1,23 @@
+{
+	"name": "Event_Trigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "CopyfromBlob1",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/azuresqlcontainer1/blobs/",
+			"scope": "/subscriptions/79535b02-9348-4afb-abb2-630dfd206b77/resourceGroups/AzureRG/providers/Microsoft.Storage/storageAccounts/azuresql1",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
